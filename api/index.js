@@ -1,7 +1,9 @@
 const API_KEYS = process.env.API_KEYS ?
   process.env.API_KEYS.split(',').map(key => key.trim()).filter(Boolean) :
   [];
-const BASE_URL = 'https://free.yunwu.ai';
+// const BASE_URL = process.env.BASE_URL || 'https://api.openai.com';
+
+const BASE_URL = process.env.BASE_URL || 'https://api.openai.com';
 
 let currentKeyIndex = 0;
 
